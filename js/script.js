@@ -16,7 +16,7 @@ Load Page
 
 /*-------------------------------------------
 Ajax link page transitions
----------------------------------------------*/
+-----------------------------------------
 
 	$("a.ajax-link").live("click", function(){
 		$this = $(this);
@@ -31,7 +31,7 @@ Ajax link page transitions
 			success:function(data){
 				document.title = $(data).filter('title').text(); 
 				current_url = link;
-        if (typeof history.pushState != 'undefined') history.pushState(data, 'Page', link);
+        if (typeof history.pushState != 'undefined') history.pushState(data, 'Page',link);
         
           setTimeout(function(){						
           $('#preloader').delay(50).fadeIn(600);
@@ -58,7 +58,7 @@ Ajax link page transitions
     return false;
 	});
 
-
+----*/
 /*-------------------------------------------
 When you click back arrow
 ---------------------------------------------*/
@@ -168,10 +168,10 @@ $(document).ready(function(){
 	setTimeout( function(){
 		if($("#site-type").length) {
         $(".typewrite span").typed({
-            strings: ["show case ", "projects "],
+            strings: ["JavaScript", "React", "React Native", "Redux", "Expo", "React Navigation", "React Hooks", "Context API", "SQLite","jQuery"],
             typeSpeed: 100,
             backDelay: 500,
-            loop: false,
+            loop: true,
             contentType: 'html', // or text
             // defaults to false for infinite loop
             loopCount: false,
@@ -196,14 +196,27 @@ function sidebarhero() {
             ,opacity=0
         ;
         if( offset<=fadeStart ){
-            opacity=1;
+            opacity=0.3;
         }else if( offset<=fadeUntil ){
-            opacity=1-offset/fadeUntil;
+            opacity=0.3-offset/fadeUntil;
         }
         fading.css('opacity',opacity);
     });
   } 
 }
+
+
+
+
+
+
+//дополнительно
+$(function(f){
+    var element = f('.portfolio-grid');
+    f(window).scroll(function(){
+        element['fade'+ (f(this).scrollTop() > 130 ? 'In': 'Out')](500);           
+    });
+});
 
 
 /*-------------------------------------------
@@ -243,3 +256,5 @@ function hidePreloader() {
 
 
 })//End
+
+

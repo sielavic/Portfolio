@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
 
 body{
   font-family: 'Raleway', sans-serif;
@@ -24,6 +24,7 @@ p{
   font-family: 'Raleway', sans-serif;
   font-size:14px;
   font-weight: 400;
+  color: black!important;
 }
 
 a{
@@ -375,12 +376,13 @@ CONTENT
   margin: 150px auto 0;
 }
 
+
 .content .text-intro h1{
   font-size:43px;
   width:40%;
   text-transform:uppercase;
   color:#000000;
-  font-weight:900;
+  //font-weight:900;
   line-height:70px;
 }
 
@@ -438,17 +440,20 @@ HOME SIDEBAR
 .home-sidebar{
   top:0;
   position:absolute;
-  width:33.3333%;
+  width:100%;
   right:0;
   height:100%;
   background:#f4f4f4;
   z-index:9;
   overflow:hidden;
   background-size:100%;
+  opacity: 0.3;
+ 
 }
 
 .parallax{
   position:absolute;
+   
 }
 
 .parallax-option{
@@ -535,7 +540,7 @@ li.grid-item{
 }
 
 .grid-hover h1{
-  font-size:23px;
+  font-size:13px;
   bottom:80px;
   left:40px;
   position:absolute;
@@ -606,7 +611,7 @@ footer{
 }
 
 .footer-margin .social-footer a{
-  font-size:15px;
+  font-size:30px;
   color:black;
   padding: 20px;
 }
@@ -700,3 +705,7 @@ textarea{
 }
 
 textarea:focus{background:#f4f4f4; height:250px;}
+
+span.error{
+  visibility:hidden;
+}
